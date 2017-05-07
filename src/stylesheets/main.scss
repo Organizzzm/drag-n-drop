@@ -1,0 +1,22 @@
+header{
+  background: #000;
+  color: #fff;
+}
+.document{
+  width: 200px;
+  height:300px;
+  border: 1px solid #c2c2c2;
+  float: left;
+  margin: 10px;
+  &__img{
+    height: 100px;
+    margin: 20px;
+  }
+  &__title{
+    font-weight: bold;
+  }
+  &__desc{
+    padding: 20px;
+    font-size: 12px;
+  }
+}
