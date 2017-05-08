@@ -2,15 +2,27 @@ header{
   background: #000;
   color: #fff;
 }
+.list:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
 .document{
   width: 200px;
   height:300px;
   border: 1px solid #c2c2c2;
+  padding: 15px;
   float: left;
   margin: 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  transition: all .2s ease-out;
+  cursor: default;
   &__img{
     height: 100px;
-    margin: 20px;
+    margin: 0 0 20px;
   }
   &__title{
     font-weight: bold;
@@ -19,4 +31,9 @@ header{
     padding: 20px;
     font-size: 12px;
   }
+}
+
+[data-selected="true"]{
+  border: 15px solid cornflowerblue;
+  padding: 1px;
 }
