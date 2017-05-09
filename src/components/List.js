@@ -7,36 +7,31 @@ export default class List extends React.Component {
 		this.props.getList();
 
 		addEventListener("keydown", (e) => {
-			if(e.keyCode == 17)
+			if (e.keyCode == 17)
 				this.props.keyHandlerDown(e);
 
-			if(e.keyCode == 16)
+			if (e.keyCode == 16)
 				this.props.shiftKeyHandlerDown(e);
 		});
 
 		addEventListener("keyup", (e) => {
-			if(e.keyCode == 17)
+			if (e.keyCode == 17)
 				this.props.keyHandlerUp(e);
 
-			if(e.keyCode == 16)
+			if (e.keyCode == 16)
 				this.props.shiftKeyHandlerUp(e);
 		});
 	}
 
-	clickHandler(e){
-		if(!e.target.closest('.document'))
-			this.props.dropSelect()
-	}
-
 	render() {
 		return (
-			<div className="list" onClick={this.clickHandler.bind(this)}>
+			<div className="list" onMouseDown={this.props.mouseDown.bind(this)}>
 				{
 					this.props.list.list.map((item, i) => <DocumentContainer key={Math.random()}
-																															title={item.name}
-																															desc={item.desc}
-																															selected={item.selected}
-																															id={i}/>)
+																																	 title={item.name}
+																																	 desc={item.desc}
+																																	 selected={item.selected}
+																																	 id={i}/>)
 				}
 			</div>
 		)

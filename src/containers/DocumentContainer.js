@@ -10,11 +10,12 @@ const mapStateToProps = ({changeBtn}) => ({
 
 const mergeProps = (stateProps, dispatchProps, ownProps) => {
 	const {dispatch} = dispatchProps;
+	const {ctrl} = stateProps;
 
 	return {
 		...ownProps,
 		change: () => {
-			if (stateProps.ctrl)
+			if (ctrl)
 				dispatch({type: 'CHANGE', id: ownProps.id});
 			else if (stateProps.shift)
 				dispatch({type: 'CHANGE_SHIFT', id: ownProps.id});

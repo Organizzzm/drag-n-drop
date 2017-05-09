@@ -11,6 +11,8 @@ header{
 .document{
   width: 200px;
   height:300px;
+  left: auto;
+  right: auto;
   border: 1px solid #c2c2c2;
   padding: 15px;
   float: left;
@@ -18,7 +20,7 @@ header{
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  transition: all .2s ease-out;
+  //transition: all .5s ease-out;
   cursor: default;
   &__img{
     height: 100px;
@@ -37,3 +39,4 @@ header{
   border: 15px solid cornflowerblue;
   padding: 1px;
 }
+
